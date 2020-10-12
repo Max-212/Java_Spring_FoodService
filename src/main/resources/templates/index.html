@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>FoodService</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts/MainScript.js"></script>
 </head>
 <body>
 
 <header class="header">
-    <div class="header__logo">FoodService</div>
+    <div class="header__logo"><a href="/">FoodService</a></div>
     <div class="header__menu">
         <ul>
-            <li><a href="#">Sign in</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="/login">Sign in</a></li>
+            <li><a href="/register">Sign up</a></li>
         </ul>
     </div>
 </header>
 
-<div class="content">
-    <div class="content__element" th:each="food : ${foods}">
-        <img th:src="${food.image}"/>
-        <div class="element__title">
-            <h3 th:text="${food.title}"></h3>
-            <label th:text="${food.weight} + 'г'"></label>
-        </div>
-        <h2 th:text="${food.price} + ' BYN'"></h2>
-    </div>
-</div>
+<div class="content" id="content"></div>
 
 </body>
 </html>
