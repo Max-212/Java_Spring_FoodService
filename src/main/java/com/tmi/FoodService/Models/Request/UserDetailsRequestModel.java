@@ -15,6 +15,7 @@ public class UserDetailsRequestModel {
     private String login;
 
     @NotNull(message = "Email cannot be null")
+    @NotBlank(message = "Email cannot be empty")
     @Email(message = "Wrong email address")
     private String email;
 

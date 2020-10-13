@@ -135,7 +135,7 @@ ul
     width: 60%;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -155,7 +155,7 @@ ul
     margin-bottom: 30px;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
@@ -163,9 +163,11 @@ ul
 
 .log_reg-form__element label
 {
-    font-size: large;
+
+    color: red;
+    font-size: 12px;
     font-family: sans-serif;
-    width: 20%;
+    height: 15px;
     text-align: center;
 }
 
@@ -180,6 +182,12 @@ ul
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     font-size: large;
     font-family: sans-serif;
+}
+
+.error
+{
+    border: 1px solid #e30000 !important;
+    box-shadow:0 0 5px 4px rgba(189, 0, 0, 0.29) !important;
 }
 
 .log_reg-form input:focus
@@ -200,4 +208,21 @@ ul
 .log_reg-form input[type=submit]:hover
 {
     background-color: #2898ff;
+}
+
+.log_reg__result
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.log-reg__result__element
+{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: 700;
 }

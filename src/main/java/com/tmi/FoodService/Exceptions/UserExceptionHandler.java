@@ -2,6 +2,7 @@ package com.tmi.FoodService.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
@@ -9,6 +10,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.time.LocalDate;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -22,11 +24,14 @@ public class UserExceptionHandler extends ResponseEntityExceptionHandler {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDate.now());
 
-        List<String> errors = ex.getBindingResult()
-                .getFieldErrors()
-                .stream()
-                .map(x -> x.getDefaultMessage())
-                .collect(Collectors.toList());
+        List<Map<String, String>> errors = new LinkedList<>();
+
+        for (FieldError el: ex.getBindingResult().getFieldErrors()) {
+            Map<String,String> error = new LinkedHashMap<>();
+            error.put("field", el.getField());
+            error.put("message", el.getDefaultMessage());
+            errors.add(error);
+        }
 
         body.put("errors", errors);
 

@@ -12,34 +12,42 @@
 
     <div class="log_reg-wrapper">
 
-        <form class="log_reg-form" action="/register" method="post">
+        <div class="log_reg-form">
             <div class="log_reg-form__element">
-                <label>Login:</label>
-                <input type="text" name="login" placeholder="Enter login">
+                <label id="label-login"></label>
+                <input id="login" type="text" placeholder="Enter login">
             </div>
 
             <div class="log_reg-form__element">
-                <label>E-mail:</label>
-                <input type="text" name="email" placeholder="Enter your E-mail">
+                <label id="label-email"></label>
+                <input id="email" type="text" placeholder="Enter your E-mail">
             </div>
 
             <div class="log_reg-form__element">
-                <label>Phone:</label>
-                <input type="tel"  name="phone" placeholder="Enter your Phone number">
+                <label id="label-phone"></label>
+                <input id="phone" type="tel" placeholder="Enter your Phone number">
             </div>
 
             <div class="log_reg-form__element">
-                <label>Password:</label>
-                <input type="password" name="password" placeholder="Enter password">
+                <label id="label-password"></label>
+                <input id="password" type="password" placeholder="Enter password">
             </div>
 
             <div class="log_reg-form__element">
-                <label>Submit:</label>
-                <input type="password" placeholder="Submit password">
+                <label></label>
+                <input id="submitPassword" type="password" placeholder="Submit password">
             </div>
 
-            <input type="submit" value="Sign in">
-        </form>
+            <div class="log_reg-form__element">
+                <label></label>
+                <input type="submit" onclick="Register()" value="Sign up">
+            </div>
+
+        </div>
+
+        <div class="log_reg__result" id="result"></div>
     </div>
+
+    <script src="scripts/RegistrationScript.js"></script>
 </body>
 </html>

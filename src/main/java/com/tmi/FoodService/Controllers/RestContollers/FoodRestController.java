@@ -21,7 +21,7 @@ public class FoodRestController {
     @Autowired
     private IFoodService foodService;
 
-    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Food>> GetAllFoods() {
 
         List<Food> foods = foodService.getAll();
@@ -33,7 +33,7 @@ public class FoodRestController {
         return new ResponseEntity<>(foods,HttpStatus.OK);
     }
 
-    @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Food> GetFoodById(@PathVariable("id") Integer id) {
 
         if(id == null) {

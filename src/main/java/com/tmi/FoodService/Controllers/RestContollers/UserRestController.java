@@ -33,7 +33,7 @@ public class UserRestController {
     @Autowired
     private UserValidator userValidator;
 
-    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<User>> GetAllUsers() {
 
         List<User> users = userService.getAll();
@@ -45,7 +45,7 @@ public class UserRestController {
         return new ResponseEntity<>(users,HttpStatus.OK);
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> Register(@Valid @RequestBody UserDetailsRequestModel userDetails, BindingResult errors) throws MethodArgumentNotValidException {
 
         userValidator.validate(userDetails, errors);
