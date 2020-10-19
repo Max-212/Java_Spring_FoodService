@@ -1,28 +1,43 @@
 package com.tmi.FoodService.Services.Implementation;
 
 
+import com.tmi.FoodService.Models.Role;
 import com.tmi.FoodService.Models.User;
+import com.tmi.FoodService.Repositories.RoleRepository;
 import com.tmi.FoodService.Repositories.UserRepository;
 import com.tmi.FoodService.Services.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @Slf4j
 public class UserService implements IUserService {
 
-    @Autowired
     private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    @Autowired
+    public UserService(UserRepository userRepository, RoleRepository roleRepository, BCryptPasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
     public User Register(User user) {
+
+        Role roleUser = roleRepository.findByName("USER");
+        List<Role> userRoles = new ArrayList<>();
+        userRoles.add(roleUser);
+        user.setRoles(userRoles);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+
         return userRepository.save(user);
     }
 
@@ -33,7 +48,7 @@ public class UserService implements IUserService {
 
     @Override
     public User FindByUsername(String username) {
-        return userRepository.findByLogin(username);
+        return userRepository.findByUsername(username);
     }
 
     @Override

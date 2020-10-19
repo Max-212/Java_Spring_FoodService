@@ -11,7 +11,7 @@ async function Register()
         return;
     }
     
-    let response = await fetch("/api/users/",
+    let response = await fetch("/api/auth/register",
     {
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
@@ -28,11 +28,7 @@ async function Register()
     document.querySelector("#result").innerHTML = "";
     if(response.status === 201)
     {
-        let div = document.createElement('div');
-        div.setAttribute('class', 'log-reg__result__element');
-        div.style.backgroundColor = "#ABFFCD";
-        div.innerHTML = "You are successfully registered";
-        document.querySelector("#result").appendChild(div) ;
+        document.querySelector("#result").innerHTML = "You are successfully registered";
     }
     else
     {

@@ -1,6 +1,7 @@
 package com.tmi.FoodService.Models.Request;
 
 
+import com.tmi.FoodService.Models.User;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -8,11 +9,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class UserDetailsRequestModel {
+public class RegistrationRequestModel {
 
-    @NotNull(message = "Login cannot be null")
-    @Size(min = 6, max = 20, message = "Login must be equal or greater than 6 characters and less than 20 characters")
-    private String login;
+    @NotNull(message = "Username cannot be null")
+    @Size(min = 6, max = 20, message = "Username must be equal or greater than 6 characters and less than 20 characters")
+    private String username;
 
     @NotNull(message = "Email cannot be null")
     @NotBlank(message = "Email cannot be empty")
@@ -27,12 +28,22 @@ public class UserDetailsRequestModel {
     @Size(min = 8, max = 16, message = "The password must be equal or greater than 8 characters and less than 16 characters")
     private String password;
 
-    public String getLogin() {
-        return login;
+    public User ToUser(){
+
+        return new User(
+                this.getUsername(),
+                this.getEmail(),
+                this.getPhone(),
+                this.getPassword()
+        );
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
