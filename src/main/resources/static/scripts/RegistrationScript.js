@@ -1,6 +1,6 @@
 async function Register()
 {
-    let login = document.querySelector("#login").value;
+    let username = document.querySelector("#username").value;
     let email = document.querySelector("#email").value;
     let phone = document.querySelector("#phone").value;
     let password = document.querySelector("#password").value;
@@ -16,7 +16,7 @@ async function Register()
         method: 'POST',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
         body: JSON.stringify({
-            login: login,
+            username: username,
             email: email,
             phone: phone,
             password: password
@@ -29,6 +29,7 @@ async function Register()
     if(response.status === 201)
     {
         document.querySelector("#result").innerHTML = "You are successfully registered";
+        window.location.href = '/login';
     }
     else
     {
@@ -37,11 +38,10 @@ async function Register()
             document.querySelector("#" + err.field).className = "error";
             document.querySelector("#label-" + err.field).innerHTML = err.message;
         });
-
     }
 }
 
-document.querySelector('#login').onfocus = RemoveClassError;
+document.querySelector('#username').onfocus = RemoveClassError;
 document.querySelector('#email').onfocus = RemoveClassError;
 document.querySelector('#phone').onfocus = RemoveClassError;
 document.querySelector('#password').onfocus = RemoveClassError;

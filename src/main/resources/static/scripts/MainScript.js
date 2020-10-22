@@ -34,7 +34,7 @@ async function ShowAllfoods()
         div.appendChild(h2);
 
         document.querySelector('#content').appendChild(div);
-    })
+    });
 }
 
 ShowAllfoods();

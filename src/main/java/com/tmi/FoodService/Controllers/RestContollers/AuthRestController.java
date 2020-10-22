@@ -80,7 +80,7 @@ public class AuthRestController {
             response.put("username", username);
             response.put("token", token);
 
-            return ResponseEntity.ok(response);
+            return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (AuthenticationException e) {
             throw new BadCredentialsException("Invalid username or password");
         }

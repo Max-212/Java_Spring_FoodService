@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <title>Sign in</title>
+    <script src="scripts/LoginScript.js"></script>
 </head>
 <body>
 
@@ -12,11 +13,26 @@
     </header>
 
     <div class="log_reg-wrapper">
-        <form class="log_reg-form" action="/login" method="post">
-            <input type="text" placeholder="Enter login">
-            <input type="password" placeholder="Enter password">
-            <input type="submit" value="Sign in">
-        </form>
+
+        <div class="log_reg-form">
+
+            <div class="log_reg-form__element">
+                <label id="label-username"></label>
+                <input id="username" type="text" placeholder="Enter login">
+            </div>
+
+            <div class="log_reg-form__element">
+                <label id="label-password"></label>
+                <input id="password" type="password" placeholder="Enter password">
+            </div>
+
+            <div class="log_reg-form__element">
+                <label></label>
+                <input type="submit" onclick="GetToken()" value="Sign in">
+            </div>
+
+            <div class="log_reg__result" id="result"></div>
+        </div>
     </div>
 
 </body>

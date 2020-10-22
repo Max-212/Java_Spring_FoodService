@@ -4,6 +4,7 @@ import com.tmi.FoodService.Exceptions.JwtAuthenticationException;
 import com.tmi.FoodService.Exceptions.UserValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
@@ -39,8 +40,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(JwtAuthenticationException.class)
-    public final ResponseEntity<Object> handleJwtAuthenticationException(JwtAuthenticationException ex, WebRequest request) {
+    @ExceptionHandler(BadCredentialsException.class)
+    public final ResponseEntity<Object> handleBadCredentialsException(BadCredentialsException ex, WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<>();
 
