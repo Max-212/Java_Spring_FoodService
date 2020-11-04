@@ -24,7 +24,6 @@ async function GetToken()
     {
         document.querySelector("#result").style.color = "#B40000";
         document.querySelector("#result").innerHTML = data.error;
-
     }
 }
 

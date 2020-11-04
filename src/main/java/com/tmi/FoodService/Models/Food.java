@@ -1,9 +1,7 @@
 package com.tmi.FoodService.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Food {
@@ -19,6 +17,12 @@ public class Food {
     private Double price;
 
     private Double weight;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "orders_foods",
+            joinColumns = {@JoinColumn(name = "food_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "order_id", referencedColumnName = "id")})
+    private List<Order> orders;
 
     public Double getWeight() {
         return weight;

@@ -18,11 +18,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
@@ -64,7 +62,7 @@ public class AuthRestController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity login(@RequestBody AuthorizationRequestModel requestModel) {
+    public ResponseEntity Login(@RequestBody AuthorizationRequestModel requestModel) {
         try {
             String username = requestModel.getUsername();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, requestModel.getPassword()));
@@ -84,5 +82,17 @@ public class AuthRestController {
         } catch (AuthenticationException e) {
             throw new BadCredentialsException("Invalid username or password");
         }
+    }
+
+    @RequestMapping(value = "/username", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity GetUsername(HttpServletRequest request) {
+
+        String token = jwtTokenProvider.resolveToken(request);
+        String username = jwtTokenProvider.getUsername(token);
+
+        Map<Object, Object> response = new HashMap<>();
+        response.put("username", username);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

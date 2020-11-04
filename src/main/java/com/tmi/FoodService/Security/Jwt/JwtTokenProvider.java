@@ -30,7 +30,6 @@ public class JwtTokenProvider {
     private long validityInMilliseconds;
 
 
-
     @Autowired
     private UserDetailsService userDetailsService;
 

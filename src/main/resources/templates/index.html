@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <title>FoodService</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts/MainScript.js"></script>
+    <script src="scripts/OrderScript.js"></script>
+    <script src="https://kit.fontawesome.com/b8991598b2.js"></script>
 </head>
 <body>
 
 <header class="header">
     <div class="header__logo"><a href="/">FoodService</a></div>
-    <div class="header__menu">
-        <ul>
-            <li><a href="/login">Sign in</a></li>
-            <li><a href="/register">Sign up</a></li>
-        </ul>
+
+    <div class="basket">
+        <div class="basket__logo">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        </div>
+        <div class="basket__count"></div>
     </div>
+    <div id="header_menu" class="header__menu" ></div>
+
 </header>
 
 
 <div class="content" id="content"></div>
 
+<script src="scripts/MainScript.js"></script>
 </body>
 </html>
