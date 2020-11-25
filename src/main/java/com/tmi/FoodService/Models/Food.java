@@ -1,5 +1,7 @@
 package com.tmi.FoodService.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -18,11 +20,17 @@ public class Food {
 
     private Double weight;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "orders_foods",
-            joinColumns = {@JoinColumn(name = "food_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "order_id", referencedColumnName = "id")})
-    private List<Order> orders;
+    @OneToMany(mappedBy = "food", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<FoodOrder> foodOrders;
+
+    public List<FoodOrder> getFoodOrders() {
+        return foodOrders;
+    }
+
+    public void setFoodOrders(List<FoodOrder> foodOrders) {
+        this.foodOrders = foodOrders;
+    }
 
     public Double getWeight() {
         return weight;

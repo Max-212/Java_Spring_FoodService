@@ -1,6 +1,7 @@
 package com.tmi.FoodService.Models;
 
 import javax.persistence.*;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -12,10 +13,34 @@ public class Order {
     @GeneratedValue(strategy= GenerationType.AUTO)
     Integer id;
 
-    @ManyToMany(mappedBy = "orders", fetch = FetchType.LAZY)
-    private List<Food> foods;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<FoodOrder> foodOrders = new LinkedList<>();
 
     @ManyToOne()
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = true)
     private User user;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public List<FoodOrder> getFoodOrders() {
+        return foodOrders;
+    }
+
+    public void setFoodOrders(List<FoodOrder> foodOrders) {
+        this.foodOrders = foodOrders;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
