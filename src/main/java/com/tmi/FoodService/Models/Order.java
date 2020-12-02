@@ -20,6 +20,16 @@ public class Order {
     @JoinColumn(name = "user_id", nullable = true)
     private User user;
 
+    private Boolean isDelivered = false;
+
+    public Boolean getDelivered() {
+        return isDelivered;
+    }
+
+    public void setDelivered(Boolean delivered) {
+        isDelivered = delivered;
+    }
+
     public Integer getId() {
         return id;
     }

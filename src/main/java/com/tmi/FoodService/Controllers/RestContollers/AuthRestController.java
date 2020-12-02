@@ -1,6 +1,6 @@
 package com.tmi.FoodService.Controllers.RestContollers;
 
-import com.tmi.FoodService.Exceptions.UserValidationException;
+import com.tmi.FoodService.Exceptions.RestValidationException;
 import com.tmi.FoodService.Models.Request.AuthorizationRequestModel;
 import com.tmi.FoodService.Models.Request.RegistrationRequestModel;
 import com.tmi.FoodService.Models.User;
@@ -52,7 +52,7 @@ public class AuthRestController {
         userValidator.validate(userDetails, errors);
 
         if(errors.hasErrors()){
-            throw new UserValidationException(errors);
+            throw new RestValidationException(errors);
         }
 
         User user = userDetails.ToUser();
@@ -95,4 +95,6 @@ public class AuthRestController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+
 }

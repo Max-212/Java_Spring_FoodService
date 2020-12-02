@@ -13,6 +13,8 @@ public interface IOrderService {
 
     Order Add(OrderRequestModel requestOrder, User user);
 
+    Order GetById(Integer id);
+
     List<Order> GetAll();
 
     List<Order> GetByUser(User user);

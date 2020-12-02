@@ -52,7 +52,7 @@ public class OrderRestController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Order> AddOrder(@RequestBody OrderRequestModel orderRequestModel, HttpServletRequest request){
+    public ResponseEntity<OrderResponseModel> AddOrder(@RequestBody OrderRequestModel orderRequestModel, HttpServletRequest request){
 
         //needed to JSON validation
 
@@ -61,7 +61,8 @@ public class OrderRestController {
         User user = userService.FindByUsername(username);
 
         Order order = orderService.Add(orderRequestModel,user);
-
-        return new ResponseEntity<>(order,HttpStatus.OK);
+        OrderResponseModel response = new OrderResponseModel(order);
+        
+        return new ResponseEntity<>(response,HttpStatus.OK);
     }
 }

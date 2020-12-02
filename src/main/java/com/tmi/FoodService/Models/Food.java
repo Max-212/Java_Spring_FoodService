@@ -24,6 +24,16 @@ public class Food {
     @JsonIgnore
     private List<FoodOrder> foodOrders;
 
+    public Food(){}
+
+    public Food(String image, String title, Double price, Double weight){
+        this.image = image;
+        this.title = title;
+        this.price = price;
+        this.weight = weight;
+    }
+
+
     public List<FoodOrder> getFoodOrders() {
         return foodOrders;
     }

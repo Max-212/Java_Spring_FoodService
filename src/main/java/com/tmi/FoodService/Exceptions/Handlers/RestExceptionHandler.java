@@ -1,7 +1,6 @@
 package com.tmi.FoodService.Exceptions.Handlers;
 
-import com.tmi.FoodService.Exceptions.JwtAuthenticationException;
-import com.tmi.FoodService.Exceptions.UserValidationException;
+import com.tmi.FoodService.Exceptions.RestValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -20,8 +19,8 @@ import java.util.Map;
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(UserValidationException.class)
-    public final ResponseEntity<Object> handleUserValidationException(UserValidationException ex, WebRequest request) {
+    @ExceptionHandler(RestValidationException.class)
+    public final ResponseEntity<Object> handleUserValidationException(RestValidationException ex, WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDate.now());

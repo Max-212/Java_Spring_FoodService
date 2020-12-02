@@ -91,6 +91,7 @@ ul
     height: 350px;
     margin-bottom: 20px;
     padding: 10px;
+    margin-left: 10px;
 }
 
 .content__element:hover

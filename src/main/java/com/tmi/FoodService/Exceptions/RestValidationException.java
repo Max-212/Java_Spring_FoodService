@@ -8,11 +8,11 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class UserValidationException extends RuntimeException {
+public class RestValidationException extends RuntimeException {
 
     private final BindingResult bindingResult;
 
-    public UserValidationException(BindingResult bindingResult) {
+    public RestValidationException(BindingResult bindingResult) {
         this.bindingResult = bindingResult;
     }
 

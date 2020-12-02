@@ -53,6 +53,11 @@ public class OrderService implements IOrderService {
     }
 
     @Override
+    public Order GetById(Integer id) {
+        return orderRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public List<Order> GetAll() {
         return orderRepository.findAll();
     }
