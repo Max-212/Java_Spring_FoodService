@@ -11,8 +11,10 @@ import com.tmi.FoodService.Repositories.OrderRepository;
 import com.tmi.FoodService.Services.IFoodService;
 import com.tmi.FoodService.Services.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.Pageable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -62,6 +64,7 @@ public class OrderService implements IOrderService {
         return orderRepository.findAll();
     }
 
+
     @Override
     public List<Order> GetByUser(User user) {
         return orderRepository.findByUser(user);
@@ -77,6 +80,7 @@ public class OrderService implements IOrderService {
 
         return orders;
     }
+
 
     @Override
     public List<OrderResponseModel> GetByUserResponseModel(User user) {

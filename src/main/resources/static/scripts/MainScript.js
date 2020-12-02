@@ -1,11 +1,11 @@
 //import fetchWithAuth from './FectWithJwt';
-ShowAllfoods();
+ShowAllfoods(0);
 GetUsernameByToken();
 
 
-async function ShowAllfoods()
+async function ShowAllfoods(page)
 {
-    let response = await fetch("api/foods",
+    let response = await fetch("api/foods/" + page,
     {
         method: 'GET', mode: 'no-cors',
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}

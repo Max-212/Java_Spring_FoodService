@@ -4,7 +4,9 @@ import com.tmi.FoodService.Models.Order;
 import com.tmi.FoodService.Models.Request.OrderRequestModel;
 import com.tmi.FoodService.Models.Response.OrderResponseModel;
 import com.tmi.FoodService.Models.User;
+import org.springframework.data.domain.Page;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 public interface IOrderService {

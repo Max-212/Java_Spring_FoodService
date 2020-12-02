@@ -4,7 +4,11 @@ import com.tmi.FoodService.Models.Food;
 import com.tmi.FoodService.Repositories.FoodRepository;
 import com.tmi.FoodService.Services.IFoodService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+
 
 import java.util.List;
 
@@ -26,6 +30,11 @@ public class FoodService implements IFoodService {
     @Override
     public List<Food> getAll() {
         return foodRepository.findAll();
+    }
+
+    @Override
+    public Page<Food> getPage(Pageable pageable) {
+        return foodRepository.findAll(pageable);
     }
 
     @Override
