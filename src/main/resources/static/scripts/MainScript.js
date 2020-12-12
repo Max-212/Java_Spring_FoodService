@@ -1,9 +1,36 @@
 //import fetchWithAuth from './FectWithJwt';
-ShowAllfoods(0);
+PaginationButtons();
+ShowFoodsPage(0);
 GetUsernameByToken();
 
+async  function PaginationButtons()
+{
+    let response = await fetch("api/foods/pages",
+        {
+            method: 'GET', mode: 'no-cors',
+            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
+        });
+    let data = await response.json();
+    let count = data.count;
 
-async function ShowAllfoods(page)
+    if(count > 1){
+        for(let i=0; i < count; i++)
+        {
+            let button = document.createElement('button');
+            button.setAttribute('class', 'page btn btn-sm btn-info');
+            button.value = i;
+            button.innerHTML = i + 1;
+            button.onclick = () =>
+            {
+                ShowFoodsPage(button.value);
+            }
+            document.querySelector('#pagination').appendChild(button);
+        }
+    }
+
+}
+
+async function ShowFoodsPage(page)
 {
     let response = await fetch("api/foods/" + page,
     {
@@ -11,6 +38,7 @@ async function ShowAllfoods(page)
         headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
     });
     let data = await response.json();
+    document.querySelector('#content').innerHTML = '';
     data.forEach(el =>
     {
         let div = document.createElement('div');

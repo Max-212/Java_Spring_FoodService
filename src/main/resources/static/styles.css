@@ -237,3 +237,14 @@ input:-webkit-autofill:focus {
     align-items: center;
 }
 
+.pagination
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn {
+    margin: 1px;
+}
+
