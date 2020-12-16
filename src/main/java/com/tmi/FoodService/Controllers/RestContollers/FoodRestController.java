@@ -23,6 +23,17 @@ public class FoodRestController {
     @Autowired
     private IFoodService foodService;
 
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Food>GetFoodsByTitle(@RequestParam String title) {
+
+        Food food = foodService.FindByName(title);
+        if(food == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(food,HttpStatus.OK);
+    }
+
     @Operation(summary = "Fetch all food in the page")
     @RequestMapping(value = "{page}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Food>> GetFoodsPages(@PathVariable(value = "page") Integer page) {
