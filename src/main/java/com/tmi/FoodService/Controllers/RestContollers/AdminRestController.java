@@ -63,8 +63,8 @@ public class AdminRestController {
         }
 
         Order order = orderService.GetById(id);
-        order.setDelivered(true);
-        orderService.Add(order);
+        orderService.SetDelivered(order);
+
 
         OrderResponseModel response = new OrderResponseModel(order);
 

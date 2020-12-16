@@ -229,12 +229,27 @@ input:-webkit-autofill:focus {
     color: #13bd81;
 }
 
-.basket
+.cart
 {
+    visibility: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.cart:hover
+{
+    background-color: #5a6991;
+    cursor: pointer;
+}
+
+.cart__count
+{
+    margin-left: 10px;
 }
 
 .pagination
@@ -248,3 +263,81 @@ input:-webkit-autofill:focus {
     margin: 1px;
 }
 
+.cart-menu
+{
+    overflow: scroll;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 70px;
+    right:-320px;
+    width: 320px;
+    background-color: #e5e5e7;
+    transition: transform 0.4s ease-in;
+    height: 80%;
+}
+
+.cart__container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.cart__element
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.cart__element__count label
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cart-menu--active
+{
+    transform: translateX(-320px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.admin-menu
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-menu__orders
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+
+.admin-menu__orders div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+
+}
