@@ -1,0 +1,212 @@
+16.12.2020 15:08:19.594 [background-preinit] INFO - HV000001: Hibernate Validator 5.4.1.Final
+16.12.2020 15:08:19.615 [restartedMain] INFO - Starting FoodServiceApplication on DESKTOP-FJ6O2VN with PID 4028 (C:\Лабы\5 сем\JavaSpring\FoodService\target\classes started by Maksim in C:\Лабы\5 сем\JavaSpring\FoodService)
+16.12.2020 15:08:19.617 [restartedMain] INFO - No active profile set, falling back to default profiles: default
+16.12.2020 15:08:19.789 [restartedMain] INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16.12.2020 15:08:19.790 [restartedMain] INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16.12.2020 15:08:21.505 [restartedMain] INFO - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+16.12.2020 15:08:21.628 [restartedMain] INFO - Finished Spring Data repository scanning in 115ms. Found 4 JPA repository interfaces.
+16.12.2020 15:08:22.651 [restartedMain] INFO - Tomcat initialized with port(s): 8081 (http)
+16.12.2020 15:08:22.681 [restartedMain] INFO - Initializing ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:08:22.682 [restartedMain] INFO - Starting service [Tomcat]
+16.12.2020 15:08:22.682 [restartedMain] INFO - Starting Servlet engine: [Apache Tomcat/9.0.38]
+16.12.2020 15:08:22.942 [restartedMain] INFO - Initializing Spring embedded WebApplicationContext
+16.12.2020 15:08:22.942 [restartedMain] INFO - Root WebApplicationContext: initialization completed in 3152 ms
+16.12.2020 15:08:22.998 [restartedMain] INFO - HikariPool-1 - Starting...
+16.12.2020 15:08:24.001 [restartedMain] INFO - HikariPool-1 - Start completed.
+16.12.2020 15:08:24.007 [restartedMain] INFO - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/java_spring_foodservice?useUnicode=true&serverTimezone=UTC'
+16.12.2020 15:08:24.130 [restartedMain] INFO - Initializing ExecutorService 'applicationTaskExecutor'
+16.12.2020 15:08:24.189 [task-1] INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+16.12.2020 15:08:24.277 [task-1] INFO - HHH000412: Hibernate ORM core version 5.4.21.Final
+16.12.2020 15:08:24.388 [restartedMain] WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16.12.2020 15:08:24.481 [task-1] INFO - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16.12.2020 15:08:24.649 [task-1] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16.12.2020 15:08:24.733 [restartedMain] INFO - Adding welcome page template: index
+16.12.2020 15:08:24.991 [task-1] WARN - HHH000039: Composite-id class does not override hashCode(): com.tmi.FoodService.Models.FoodOrderId
+16.12.2020 15:08:25.114 [restartedMain] INFO - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39d9e8cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@623051d5, org.springframework.security.web.header.HeaderWriterFilter@d947d63, org.springframework.security.web.authentication.logout.LogoutFilter@3c4b50fa, com.tmi.FoodService.Security.Jwt.ExceptionHandlerFilter@2440cb92, com.tmi.FoodService.Security.Jwt.JwtTokenFilter@107d6642, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@238491eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4eccf17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27f2bd63, org.springframework.security.web.session.SessionManagementFilter@4f896f16, org.springframework.security.web.access.ExceptionTranslationFilter@6e18c370, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b1d6c24]
+16.12.2020 15:08:25.203 [restartedMain] INFO - LiveReload server is running on port 35729
+16.12.2020 15:08:25.237 [restartedMain] INFO - Starting ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:08:25.302 [restartedMain] INFO - Tomcat started on port(s): 8081 (http) with context path ''
+16.12.2020 15:08:25.304 [restartedMain] INFO - Triggering deferred initialization of Spring Data repositories…
+16.12.2020 15:08:26.145 [task-1] INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16.12.2020 15:08:26.156 [task-1] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16.12.2020 15:08:26.631 [restartedMain] INFO - Spring Data repositories initialized!
+16.12.2020 15:08:26.650 [restartedMain] INFO - Started FoodServiceApplication in 7.886 seconds (JVM running for 10.143)
+16.12.2020 15:08:34.635 [http-nio-8081-exec-1] INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16.12.2020 15:08:35.676 [http-nio-8081-exec-5] INFO - /api/admin/orders -GET
+16.12.2020 15:09:29.270 [http-nio-8081-exec-2] INFO - /api/admin/orders -GET
+16.12.2020 15:09:58.216 [background-preinit] INFO - HV000001: Hibernate Validator 5.4.1.Final
+16.12.2020 15:09:58.245 [restartedMain] INFO - Starting FoodServiceApplication on DESKTOP-FJ6O2VN with PID 7684 (C:\Лабы\5 сем\JavaSpring\FoodService\target\classes started by Maksim in C:\Лабы\5 сем\JavaSpring\FoodService)
+16.12.2020 15:09:58.247 [restartedMain] INFO - No active profile set, falling back to default profiles: default
+16.12.2020 15:09:58.343 [restartedMain] INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16.12.2020 15:09:58.343 [restartedMain] INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16.12.2020 15:10:00.160 [restartedMain] INFO - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+16.12.2020 15:10:00.275 [restartedMain] INFO - Finished Spring Data repository scanning in 102ms. Found 4 JPA repository interfaces.
+16.12.2020 15:10:01.420 [restartedMain] INFO - Tomcat initialized with port(s): 8081 (http)
+16.12.2020 15:10:01.437 [restartedMain] INFO - Initializing ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:10:01.438 [restartedMain] INFO - Starting service [Tomcat]
+16.12.2020 15:10:01.438 [restartedMain] INFO - Starting Servlet engine: [Apache Tomcat/9.0.38]
+16.12.2020 15:10:01.649 [restartedMain] INFO - Initializing Spring embedded WebApplicationContext
+16.12.2020 15:10:01.649 [restartedMain] INFO - Root WebApplicationContext: initialization completed in 3306 ms
+16.12.2020 15:10:01.731 [restartedMain] INFO - HikariPool-1 - Starting...
+16.12.2020 15:10:02.595 [restartedMain] INFO - HikariPool-1 - Start completed.
+16.12.2020 15:10:02.603 [restartedMain] INFO - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/java_spring_foodservice?useUnicode=true&serverTimezone=UTC'
+16.12.2020 15:10:02.730 [restartedMain] INFO - Initializing ExecutorService 'applicationTaskExecutor'
+16.12.2020 15:10:02.796 [task-1] INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+16.12.2020 15:10:02.899 [task-1] INFO - HHH000412: Hibernate ORM core version 5.4.21.Final
+16.12.2020 15:10:03.030 [restartedMain] WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16.12.2020 15:10:03.105 [task-1] INFO - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16.12.2020 15:10:03.287 [task-1] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16.12.2020 15:10:03.403 [restartedMain] INFO - Adding welcome page template: index
+16.12.2020 15:10:03.697 [task-1] WARN - HHH000039: Composite-id class does not override hashCode(): com.tmi.FoodService.Models.FoodOrderId
+16.12.2020 15:10:03.827 [restartedMain] INFO - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47af03b, org.springframework.security.web.context.SecurityContextPersistenceFilter@496ede93, org.springframework.security.web.header.HeaderWriterFilter@5e7b67a1, org.springframework.security.web.authentication.logout.LogoutFilter@49450f27, com.tmi.FoodService.Security.Jwt.ExceptionHandlerFilter@6a3629a7, com.tmi.FoodService.Security.Jwt.JwtTokenFilter@5949a20f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29d730d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ac0a6ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b68a72e, org.springframework.security.web.session.SessionManagementFilter@47185e75, org.springframework.security.web.access.ExceptionTranslationFilter@4299b4fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@501e5351]
+16.12.2020 15:10:03.910 [restartedMain] INFO - LiveReload server is running on port 35729
+16.12.2020 15:10:03.951 [restartedMain] INFO - Starting ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:10:03.995 [restartedMain] INFO - Tomcat started on port(s): 8081 (http) with context path ''
+16.12.2020 15:10:03.998 [restartedMain] INFO - Triggering deferred initialization of Spring Data repositories…
+16.12.2020 15:10:05.312 [task-1] INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16.12.2020 15:10:05.326 [task-1] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16.12.2020 15:10:05.917 [restartedMain] INFO - Spring Data repositories initialized!
+16.12.2020 15:10:05.933 [restartedMain] INFO - Started FoodServiceApplication in 8.361 seconds (JVM running for 10.781)
+16.12.2020 15:10:11.467 [http-nio-8081-exec-1] INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16.12.2020 15:10:12.489 [http-nio-8081-exec-5] INFO - /api/admin/orders -GET
+16.12.2020 15:10:49.245 [background-preinit] INFO - HV000001: Hibernate Validator 5.4.1.Final
+16.12.2020 15:10:49.322 [restartedMain] INFO - Starting FoodServiceApplication on DESKTOP-FJ6O2VN with PID 13836 (C:\Лабы\5 сем\JavaSpring\FoodService\target\classes started by Maksim in C:\Лабы\5 сем\JavaSpring\FoodService)
+16.12.2020 15:10:49.339 [restartedMain] INFO - No active profile set, falling back to default profiles: default
+16.12.2020 15:10:49.477 [restartedMain] INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16.12.2020 15:10:49.477 [restartedMain] INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16.12.2020 15:10:51.167 [restartedMain] INFO - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+16.12.2020 15:10:51.334 [restartedMain] INFO - Finished Spring Data repository scanning in 156ms. Found 4 JPA repository interfaces.
+16.12.2020 15:10:52.588 [restartedMain] INFO - Tomcat initialized with port(s): 8081 (http)
+16.12.2020 15:10:52.601 [restartedMain] INFO - Initializing ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:10:52.602 [restartedMain] INFO - Starting service [Tomcat]
+16.12.2020 15:10:52.603 [restartedMain] INFO - Starting Servlet engine: [Apache Tomcat/9.0.38]
+16.12.2020 15:10:52.804 [restartedMain] INFO - Initializing Spring embedded WebApplicationContext
+16.12.2020 15:10:52.805 [restartedMain] INFO - Root WebApplicationContext: initialization completed in 3328 ms
+16.12.2020 15:10:52.874 [restartedMain] INFO - HikariPool-1 - Starting...
+16.12.2020 15:10:53.861 [restartedMain] INFO - HikariPool-1 - Start completed.
+16.12.2020 15:10:53.870 [restartedMain] INFO - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/java_spring_foodservice?useUnicode=true&serverTimezone=UTC'
+16.12.2020 15:10:54.026 [restartedMain] INFO - Initializing ExecutorService 'applicationTaskExecutor'
+16.12.2020 15:10:54.084 [task-1] INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+16.12.2020 15:10:54.170 [task-1] INFO - HHH000412: Hibernate ORM core version 5.4.21.Final
+16.12.2020 15:10:54.230 [restartedMain] WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16.12.2020 15:10:54.361 [task-1] INFO - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16.12.2020 15:10:54.581 [task-1] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16.12.2020 15:10:54.656 [restartedMain] INFO - Adding welcome page template: index
+16.12.2020 15:10:54.943 [task-1] WARN - HHH000039: Composite-id class does not override hashCode(): com.tmi.FoodService.Models.FoodOrderId
+16.12.2020 15:10:55.100 [restartedMain] INFO - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@726c3c72, org.springframework.security.web.context.SecurityContextPersistenceFilter@3785ca9b, org.springframework.security.web.header.HeaderWriterFilter@49a106a6, org.springframework.security.web.authentication.logout.LogoutFilter@724b2743, com.tmi.FoodService.Security.Jwt.ExceptionHandlerFilter@d493bf7, com.tmi.FoodService.Security.Jwt.JwtTokenFilter@30dac2b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@370d8e23, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f827912, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@359b598d, org.springframework.security.web.session.SessionManagementFilter@3d213932, org.springframework.security.web.access.ExceptionTranslationFilter@41f997cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f72dd20]
+16.12.2020 15:10:55.257 [restartedMain] INFO - LiveReload server is running on port 35729
+16.12.2020 15:10:55.305 [restartedMain] INFO - Starting ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:10:55.342 [restartedMain] INFO - Tomcat started on port(s): 8081 (http) with context path ''
+16.12.2020 15:10:55.344 [restartedMain] INFO - Triggering deferred initialization of Spring Data repositories…
+16.12.2020 15:10:56.074 [task-1] INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16.12.2020 15:10:56.086 [task-1] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16.12.2020 15:10:56.717 [restartedMain] INFO - Spring Data repositories initialized!
+16.12.2020 15:10:56.747 [restartedMain] INFO - Started FoodServiceApplication in 8.285 seconds (JVM running for 10.293)
+16.12.2020 15:11:01.598 [http-nio-8081-exec-1] INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16.12.2020 15:11:04.247 [http-nio-8081-exec-5] INFO - /api/admin/orders -GET
+16.12.2020 15:12:56.877 [background-preinit] INFO - HV000001: Hibernate Validator 5.4.1.Final
+16.12.2020 15:12:56.966 [restartedMain] INFO - Starting FoodServiceApplication on DESKTOP-FJ6O2VN with PID 16996 (C:\Лабы\5 сем\JavaSpring\FoodService\target\classes started by Maksim in C:\Лабы\5 сем\JavaSpring\FoodService)
+16.12.2020 15:12:56.982 [restartedMain] INFO - No active profile set, falling back to default profiles: default
+16.12.2020 15:12:57.112 [restartedMain] INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16.12.2020 15:12:57.113 [restartedMain] INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16.12.2020 15:12:58.684 [restartedMain] INFO - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+16.12.2020 15:12:58.822 [restartedMain] INFO - Finished Spring Data repository scanning in 129ms. Found 4 JPA repository interfaces.
+16.12.2020 15:12:59.967 [restartedMain] INFO - Tomcat initialized with port(s): 8081 (http)
+16.12.2020 15:12:59.978 [restartedMain] INFO - Initializing ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:12:59.979 [restartedMain] INFO - Starting service [Tomcat]
+16.12.2020 15:12:59.979 [restartedMain] INFO - Starting Servlet engine: [Apache Tomcat/9.0.38]
+16.12.2020 15:13:00.210 [restartedMain] INFO - Initializing Spring embedded WebApplicationContext
+16.12.2020 15:13:00.210 [restartedMain] INFO - Root WebApplicationContext: initialization completed in 3097 ms
+16.12.2020 15:13:00.286 [restartedMain] INFO - HikariPool-1 - Starting...
+16.12.2020 15:13:01.406 [restartedMain] INFO - HikariPool-1 - Start completed.
+16.12.2020 15:13:01.413 [restartedMain] INFO - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/java_spring_foodservice?useUnicode=true&serverTimezone=UTC'
+16.12.2020 15:13:01.553 [restartedMain] INFO - Initializing ExecutorService 'applicationTaskExecutor'
+16.12.2020 15:13:01.649 [task-1] INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+16.12.2020 15:13:01.749 [task-1] INFO - HHH000412: Hibernate ORM core version 5.4.21.Final
+16.12.2020 15:13:01.815 [restartedMain] WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16.12.2020 15:13:01.910 [task-1] INFO - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16.12.2020 15:13:02.071 [task-1] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16.12.2020 15:13:02.188 [restartedMain] INFO - Adding welcome page template: index
+16.12.2020 15:13:02.397 [task-1] WARN - HHH000039: Composite-id class does not override hashCode(): com.tmi.FoodService.Models.FoodOrderId
+16.12.2020 15:13:02.616 [restartedMain] INFO - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@303e4446, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ebf6166, org.springframework.security.web.header.HeaderWriterFilter@1486163a, org.springframework.security.web.authentication.logout.LogoutFilter@2d31bdde, com.tmi.FoodService.Security.Jwt.ExceptionHandlerFilter@3cca2c0b, com.tmi.FoodService.Security.Jwt.JwtTokenFilter@6d38c281, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54659bfb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b8ebb39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e0eec33, org.springframework.security.web.session.SessionManagementFilter@17eaf6d0, org.springframework.security.web.access.ExceptionTranslationFilter@3c94eb47, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f2b9b87]
+16.12.2020 15:13:02.685 [restartedMain] INFO - LiveReload server is running on port 35729
+16.12.2020 15:13:02.722 [restartedMain] INFO - Starting ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:13:02.760 [restartedMain] INFO - Tomcat started on port(s): 8081 (http) with context path ''
+16.12.2020 15:13:02.763 [restartedMain] INFO - Triggering deferred initialization of Spring Data repositories…
+16.12.2020 15:13:03.623 [task-1] INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16.12.2020 15:13:03.631 [task-1] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16.12.2020 15:13:03.985 [restartedMain] INFO - Spring Data repositories initialized!
+16.12.2020 15:13:04.022 [restartedMain] INFO - Started FoodServiceApplication in 7.796 seconds (JVM running for 10.235)
+16.12.2020 15:13:12.235 [http-nio-8081-exec-1] INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16.12.2020 15:13:13.347 [http-nio-8081-exec-7] INFO - /api/admin/orders -GET
+16.12.2020 15:15:41.527 [background-preinit] INFO - HV000001: Hibernate Validator 5.4.1.Final
+16.12.2020 15:15:41.595 [restartedMain] INFO - Starting FoodServiceApplication on DESKTOP-FJ6O2VN with PID 18260 (C:\Лабы\5 сем\JavaSpring\FoodService\target\classes started by Maksim in C:\Лабы\5 сем\JavaSpring\FoodService)
+16.12.2020 15:15:41.642 [restartedMain] INFO - No active profile set, falling back to default profiles: default
+16.12.2020 15:15:41.895 [restartedMain] INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16.12.2020 15:15:41.896 [restartedMain] INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16.12.2020 15:15:44.245 [restartedMain] INFO - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+16.12.2020 15:15:44.444 [restartedMain] INFO - Finished Spring Data repository scanning in 183ms. Found 4 JPA repository interfaces.
+16.12.2020 15:15:46.032 [restartedMain] INFO - Tomcat initialized with port(s): 8081 (http)
+16.12.2020 15:15:46.043 [restartedMain] INFO - Initializing ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:15:46.044 [restartedMain] INFO - Starting service [Tomcat]
+16.12.2020 15:15:46.044 [restartedMain] INFO - Starting Servlet engine: [Apache Tomcat/9.0.38]
+16.12.2020 15:15:46.273 [restartedMain] INFO - Initializing Spring embedded WebApplicationContext
+16.12.2020 15:15:46.274 [restartedMain] INFO - Root WebApplicationContext: initialization completed in 4378 ms
+16.12.2020 15:15:46.366 [restartedMain] INFO - HikariPool-1 - Starting...
+16.12.2020 15:15:47.271 [restartedMain] INFO - HikariPool-1 - Start completed.
+16.12.2020 15:15:47.281 [restartedMain] INFO - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/java_spring_foodservice?useUnicode=true&serverTimezone=UTC'
+16.12.2020 15:15:47.428 [restartedMain] INFO - Initializing ExecutorService 'applicationTaskExecutor'
+16.12.2020 15:15:47.494 [task-1] INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+16.12.2020 15:15:47.595 [task-1] INFO - HHH000412: Hibernate ORM core version 5.4.21.Final
+16.12.2020 15:15:47.665 [restartedMain] WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16.12.2020 15:15:47.761 [task-1] INFO - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16.12.2020 15:15:47.943 [task-1] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16.12.2020 15:15:48.040 [restartedMain] INFO - Adding welcome page template: index
+16.12.2020 15:15:48.310 [task-1] WARN - HHH000039: Composite-id class does not override hashCode(): com.tmi.FoodService.Models.FoodOrderId
+16.12.2020 15:15:48.455 [restartedMain] INFO - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f6811ba, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b127c00, org.springframework.security.web.header.HeaderWriterFilter@70a13a02, org.springframework.security.web.authentication.logout.LogoutFilter@24369a6b, com.tmi.FoodService.Security.Jwt.ExceptionHandlerFilter@631af1b, com.tmi.FoodService.Security.Jwt.JwtTokenFilter@2a75eb80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bf0a4cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4aec3ca2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bd6494a, org.springframework.security.web.session.SessionManagementFilter@2a90408a, org.springframework.security.web.access.ExceptionTranslationFilter@481df53c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5da2ad08]
+16.12.2020 15:15:48.535 [restartedMain] INFO - LiveReload server is running on port 35729
+16.12.2020 15:15:48.578 [restartedMain] INFO - Starting ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:15:48.615 [restartedMain] INFO - Tomcat started on port(s): 8081 (http) with context path ''
+16.12.2020 15:15:48.619 [restartedMain] INFO - Triggering deferred initialization of Spring Data repositories…
+16.12.2020 15:15:49.411 [task-1] INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16.12.2020 15:15:49.419 [task-1] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16.12.2020 15:15:49.988 [restartedMain] INFO - Spring Data repositories initialized!
+16.12.2020 15:15:50.008 [restartedMain] INFO - Started FoodServiceApplication in 9.267 seconds (JVM running for 11.589)
+16.12.2020 15:16:02.626 [http-nio-8081-exec-1] INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16.12.2020 15:16:04.689 [http-nio-8081-exec-5] INFO - /api/admin/orders -GET
+16.12.2020 15:20:45.399 [background-preinit] INFO - HV000001: Hibernate Validator 5.4.1.Final
+16.12.2020 15:20:45.435 [restartedMain] INFO - Starting FoodServiceApplication on DESKTOP-FJ6O2VN with PID 13692 (C:\Лабы\5 сем\JavaSpring\FoodService\target\classes started by Maksim in C:\Лабы\5 сем\JavaSpring\FoodService)
+16.12.2020 15:20:45.441 [restartedMain] INFO - No active profile set, falling back to default profiles: default
+16.12.2020 15:20:45.541 [restartedMain] INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16.12.2020 15:20:45.542 [restartedMain] INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16.12.2020 15:20:47.897 [restartedMain] INFO - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+16.12.2020 15:20:48.109 [restartedMain] INFO - Finished Spring Data repository scanning in 197ms. Found 4 JPA repository interfaces.
+16.12.2020 15:20:49.557 [restartedMain] INFO - Tomcat initialized with port(s): 8081 (http)
+16.12.2020 15:20:49.567 [restartedMain] INFO - Initializing ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:20:49.567 [restartedMain] INFO - Starting service [Tomcat]
+16.12.2020 15:20:49.567 [restartedMain] INFO - Starting Servlet engine: [Apache Tomcat/9.0.38]
+16.12.2020 15:20:49.838 [restartedMain] INFO - Initializing Spring embedded WebApplicationContext
+16.12.2020 15:20:49.838 [restartedMain] INFO - Root WebApplicationContext: initialization completed in 4295 ms
+16.12.2020 15:20:49.891 [restartedMain] INFO - HikariPool-1 - Starting...
+16.12.2020 15:20:50.797 [restartedMain] INFO - HikariPool-1 - Start completed.
+16.12.2020 15:20:50.805 [restartedMain] INFO - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/java_spring_foodservice?useUnicode=true&serverTimezone=UTC'
+16.12.2020 15:20:50.968 [restartedMain] INFO - Initializing ExecutorService 'applicationTaskExecutor'
+16.12.2020 15:20:51.034 [task-1] INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+16.12.2020 15:20:51.113 [task-1] INFO - HHH000412: Hibernate ORM core version 5.4.21.Final
+16.12.2020 15:20:51.223 [restartedMain] WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16.12.2020 15:20:51.297 [task-1] INFO - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16.12.2020 15:20:51.496 [task-1] INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16.12.2020 15:20:51.611 [restartedMain] INFO - Adding welcome page template: index
+16.12.2020 15:20:51.879 [task-1] WARN - HHH000039: Composite-id class does not override hashCode(): com.tmi.FoodService.Models.FoodOrderId
+16.12.2020 15:20:52.088 [restartedMain] INFO - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51fc7f09, org.springframework.security.web.context.SecurityContextPersistenceFilter@226cb71, org.springframework.security.web.header.HeaderWriterFilter@3085867e, org.springframework.security.web.authentication.logout.LogoutFilter@7710f531, com.tmi.FoodService.Security.Jwt.ExceptionHandlerFilter@7d56d228, com.tmi.FoodService.Security.Jwt.JwtTokenFilter@6094158b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@448a3f7b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c04ece8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e3000ba, org.springframework.security.web.session.SessionManagementFilter@2e173095, org.springframework.security.web.access.ExceptionTranslationFilter@4a43f5a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79bae8d5]
+16.12.2020 15:20:52.182 [restartedMain] INFO - LiveReload server is running on port 35729
+16.12.2020 15:20:52.228 [restartedMain] INFO - Starting ProtocolHandler ["http-nio-8081"]
+16.12.2020 15:20:52.265 [restartedMain] INFO - Tomcat started on port(s): 8081 (http) with context path ''
+16.12.2020 15:20:52.267 [restartedMain] INFO - Triggering deferred initialization of Spring Data repositories…
+16.12.2020 15:20:52.838 [task-1] INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16.12.2020 15:20:52.850 [task-1] INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16.12.2020 15:20:53.468 [restartedMain] INFO - Spring Data repositories initialized!
+16.12.2020 15:20:53.494 [restartedMain] INFO - Started FoodServiceApplication in 8.769 seconds (JVM running for 10.947)
+16.12.2020 15:21:10.272 [http-nio-8081-exec-1] INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16.12.2020 15:21:11.651 [http-nio-8081-exec-5] INFO - /api/admin/orders -GET
+16.12.2020 15:22:09.039 [http-nio-8081-exec-4] INFO - /api/admin/orders -GET
