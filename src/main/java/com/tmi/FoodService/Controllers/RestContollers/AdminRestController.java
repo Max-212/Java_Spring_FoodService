@@ -10,6 +10,7 @@ import com.tmi.FoodService.Models.User;
 import com.tmi.FoodService.Services.IFoodService;
 import com.tmi.FoodService.Services.IOrderService;
 import com.tmi.FoodService.Services.IUserService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -39,6 +40,7 @@ public class AdminRestController {
     @Autowired
     private IFoodService foodService;
 
+    @Operation(summary = "Fetch info about all users")
     @RequestMapping(value = "users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<User>> GetAllUsers() {
 
@@ -51,6 +53,7 @@ public class AdminRestController {
         return new ResponseEntity<>(users,HttpStatus.OK);
     }
 
+    @Operation(summary = "Fetch info about all orders")
     @RequestMapping(value = "orders", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<OrderResponseModel>> GetAllOrders(){
 
@@ -59,6 +62,7 @@ public class AdminRestController {
         return new ResponseEntity<>(orders,HttpStatus.OK);
     }
 
+    @Operation(summary = "Update order in to Delivered status")
     @RequestMapping(value = "orders/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<OrderResponseModel> AcceptOrder(@PathVariable(value = "id") Integer id){
 
@@ -72,6 +76,7 @@ public class AdminRestController {
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
+    @Operation(summary = "Add food")
     @RequestMapping(value = "food", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Food> AddFood(@Valid @RequestBody AddFoodRequestModel foodDto, BindingResult errors){
 
@@ -85,6 +90,7 @@ public class AdminRestController {
         return new ResponseEntity<>(food,HttpStatus.OK);
     }
 
+    @Operation(summary = "Update info about food")
     @RequestMapping(value = "food", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Food> UpdateFood(@Valid @RequestBody UpdateFoodRequestModel foodDto, BindingResult errors) {
 
@@ -103,6 +109,7 @@ public class AdminRestController {
         return new ResponseEntity<>(food,HttpStatus.OK);
     }
 
+    @Operation(summary = "Delete Food")
     @RequestMapping(value = "food/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Food>> DeleteFood(@PathVariable(value = "id") Integer id){
 

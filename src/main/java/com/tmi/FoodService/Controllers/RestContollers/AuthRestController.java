@@ -7,6 +7,7 @@ import com.tmi.FoodService.Models.User;
 import com.tmi.FoodService.Security.Jwt.JwtTokenProvider;
 import com.tmi.FoodService.Services.IUserService;
 import com.tmi.FoodService.Validator.UserValidator;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -46,6 +47,7 @@ public class AuthRestController {
         this.userValidator = userValidator;
     }
 
+    @Operation(summary = "Add new user")
     @RequestMapping(value = "/register", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> Register(@Valid @RequestBody RegistrationRequestModel userDetails, BindingResult errors) throws MethodArgumentNotValidException {
 
@@ -61,6 +63,7 @@ public class AuthRestController {
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
+    @Operation(summary = "Get jwt token")
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity Login(@RequestBody AuthorizationRequestModel requestModel) {
         try {
@@ -84,6 +87,7 @@ public class AuthRestController {
         }
     }
 
+    @Operation(summary = "Get username by token")
     @RequestMapping(value = "/username", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity GetUsername(HttpServletRequest request) {
 

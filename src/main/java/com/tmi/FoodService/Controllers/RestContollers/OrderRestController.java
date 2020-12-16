@@ -11,6 +11,7 @@ import com.tmi.FoodService.Security.Jwt.JwtTokenProvider;
 import com.tmi.FoodService.Services.IFoodService;
 import com.tmi.FoodService.Services.IOrderService;
 import com.tmi.FoodService.Services.IUserService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -39,6 +40,7 @@ public class OrderRestController {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
+    @Operation(summary = "Get all user orders")
     @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<OrderResponseModel>> Orders(HttpServletRequest request) {
 
@@ -51,6 +53,7 @@ public class OrderRestController {
         return new ResponseEntity<>(orders,HttpStatus.OK);
     }
 
+    @Operation(summary = "Add Order")
     @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<OrderResponseModel> AddOrder(@RequestBody OrderRequestModel orderRequestModel, HttpServletRequest request){
 

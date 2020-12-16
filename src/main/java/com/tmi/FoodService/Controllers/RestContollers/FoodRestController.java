@@ -3,6 +3,7 @@ package com.tmi.FoodService.Controllers.RestContollers;
 import com.tmi.FoodService.Models.Food;
 import com.tmi.FoodService.Services.IFoodService;
 import com.tmi.FoodService.Services.Implementation.FoodService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22,6 +23,7 @@ public class FoodRestController {
     @Autowired
     private IFoodService foodService;
 
+    @Operation(summary = "Fetch all food in the page")
     @RequestMapping(value = "{page}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Food>> GetFoodsPages(@PathVariable(value = "page") Integer page) {
 
@@ -34,6 +36,7 @@ public class FoodRestController {
         return new ResponseEntity<>(foods,HttpStatus.OK);
     }
 
+    @Operation(summary = "Get count of foods pages")
     @RequestMapping(value = "/pages", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity GetPagesCount(){
 
